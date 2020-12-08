@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ai</title>
+
 </head>
-<body>
-    hello world
+<body onselectstart="return false">
+    hello ai
+    <div id='root'>
+        哈哈哈哈哈哈jd😄
+       <button id='play'>
+         点我
+       </button>
+       <div id='text'/>
+    </div>
+    <script>
+        document.oncontextmenu=function(e){return false;}
+        let i = 0;
+        let isTouched = false
+        const text = document.getElementById('text')
+        document.addEventListener('DOMContentLoaded', function(event) {
+            const clickElementFunc = (e) => {
+             if(true){
+                if(text){
+                text.innerHTML = `click-${new Date().getTime()}`
+              }
+             }
+            }
+            const touchElementFunc = (e) => {
+              if(text){
+                isTouched= true
+                e.click()
+                text.innerHTML = `touch-${new Date().getTime()}`
+              }
+            }
+            const playbtn = document.getElementById('play')
+            document.addEventListener("click", clickElementFunc, false);
+            document.addEventListener("touchstart", touchElementFunc, false);
+            document.body.addEventListener('touchmove', function (e) {
+                e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+            }, {passive: false}); 
+        });
+    </script>
 </body>
 </html>
