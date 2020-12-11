@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ai</title>
+    <script src="./vconsole.min.js"></script>
+    <script src="./event.js"></script>
+    <script>
+        var vConsole = new VConsole();
+        console.log('Hello world');
+    </script>
+    <script>
+        receiveEvent(null,(res) => {
+            console.log('receiveEvent', res)
+        }) 
+    </script>
+</head>
+<body onselectstart="return false">
+    hello ai
+    <div id='root'>
+        哈哈哈哈哈哈jddd😄
+       <!-- <button id='play'>
+         点我
+       </button>
+       <div id='text'/> -->
+    </div>
+    <iframe
+      src="./index-copy.html?onlyAllowTouchEvent=yes"
+      width="400"
+      height="225"
+      allow="allow"
+    />
+    <!-- <script>
+        let i = 0;
+        const text = document.getElementById('text')
+        const play = document.getElementById('play')
+        document.addEventListener('DOMContentLoaded', function(event) {
+            const clickElementFunc = (e) => {
+               console.log('clickElementFunc')
+               text.innerHTML = `click-${new Date().getTime()}`
+            }
+            const touchElementFunc = (e) => {
+              if(text){
+                text.innerHTML = `touch-${new Date().getTime()}`
+              }
+              if(play){
+                  setTimeout(() => {
+                    play.click()
+                  },2000)
+              }
+            }
+            const playbtn = document.getElementById('play')
+            playbtn.addEventListener("click", clickElementFunc, false);
+            document.addEventListener("touchstart", touchElementFunc, false);
+            document.body.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, {passive: false}); 
+        });
+    </script> -->
+</body>
+</html>
